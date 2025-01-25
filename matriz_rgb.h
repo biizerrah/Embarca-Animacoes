@@ -1,3 +1,6 @@
+#ifndef MATRIZ_RGB_H
+#define MATRIZ_RGB_H
+
 #include "hardware/pio.h"
 #include "hardware/clocks.h"
 
@@ -100,3 +103,4 @@ void desenho_sprite(int matriz[5][5][3]) {
     }
   }
 } 
+#endif // MATRIZ_RGB_H

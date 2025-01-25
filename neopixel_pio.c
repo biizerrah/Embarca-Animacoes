@@ -2,6 +2,11 @@
 #include "pico/stdlib.h"
 #include "matriz_rgb.h"
 #include "animacao_cobra.h"
+#include "animacao_TeclaB.h"
+#include "animacao_TeclaA.h"
+#include "animacao_TeclaC.h"
+#include "animacao_TeclaD.h"
+#include "animacao_TeclaHastag.h"
 
 //Inicia a configuração do teclado 
 const uint ROW_PINS[4] = {9, 8, 6, 5};     // Linhas: R1, R2, R3, R4
@@ -77,38 +82,45 @@ int main() {
   // Não faz mais nada. Loop infinito.
   while (true) {
 
-    char key = scan_keypad();
+    //char key = scan_keypad(); 
     //Para testar na placa digitando os comandos, comente a linha acima e descomente as duas linhas abaixo.
-    //char key;
-    //scanf("%c", &key);
+    char key;
+    scanf("%c", &key);
 
     if (key != '\0') // Se alguma tecla foi pressionada
     {
         printf("Tecla pressionada: %c\n", key);
+
+        if(key=='#')
+        {
+            //Animação #
+            printf("Tecla # pressionada da animação #\n");
+            animacao_TeclaHashtag();
+        }
         
         if (key == 'A') 
         {
             // Animação A
             printf("Tecla A pressionada da animação A\n");
-            // Chame a função para a animação A
+            animacao_TeclaA();
         }
         else if (key == 'B') 
         {
             // Animação B
             printf("Tecla B pressionada da animação B\n");
-            // Chame a função para a animação B
+            animacao_TeclaB();
         }
         else if (key == 'C')  
         {
             // Animação C
             printf("Tecla C pressionada da animação C\n");
-            // Chame a função para a animação C
+            animacao_TeclaC();
         }
         else if (key == 'D') 
         {
             // Animação D
             printf("Tecla D pressionada da animação D\n");
-            // Chame a função para a animação D
+            animacao_TeclaD();
         }
         else if (key == '0') 
         {
