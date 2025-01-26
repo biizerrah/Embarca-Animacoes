@@ -82,10 +82,10 @@ int main() {
   // Não faz mais nada. Loop infinito.
   while (true) {
 
-    //char key = scan_keypad(); 
+    char key = scan_keypad(); 
     //Para testar na placa digitando os comandos, comente a linha acima e descomente as duas linhas abaixo.
-    char key;
-    scanf("%c", &key);
+    //char key;
+    //scanf("%c", &key);
 
     if (key != '\0') // Se alguma tecla foi pressionada
     {
