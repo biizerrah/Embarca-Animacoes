@@ -7,6 +7,8 @@
 #include "animacao_TeclaC.h"
 #include "animacao_TeclaD.h"
 #include "animacao_TeclaHastag.h"
+#include "pico/bootrom.h"  // Inclui a função reset_usb_boot
+
 
 
 //Inicia a configuração do teclado 
@@ -166,6 +168,14 @@ int main() {
             printf("Tecla 6 pressionada da animação 6\n");
             // Chame a função para a animação 6
         }
+
+         else if (key == '*') 
+        {
+            printf("Tecla * acionada. Reiniciando no modo de gravação...\n");
+            reset_usb_boot(0, 0);  // Reinicia o Pico no modo de gravação via USB
+        }
+        
+
         else 
         {
             // Tecla desconhecida

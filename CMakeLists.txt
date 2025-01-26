@@ -46,6 +46,7 @@ pico_enable_stdio_usb(neopixel_pio 1)
 target_link_libraries(neopixel_pio
         pico_stdlib
         hardware_pwm    # Biblioteca para suporte ao PWM
+        pico_bootrom    # Biblioteca para a função reset_usb_boot
         )
 
 # Add the standard include files to the build
