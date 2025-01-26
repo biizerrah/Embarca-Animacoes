@@ -4,7 +4,13 @@
             "name": "Pico",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${userHome}/.pico-sdk/sdk/2.1.0/**"
+                "${userHome}/.pico-sdk/sdk/2.1.0/**",
+                "C:/Users/PC do Jott4/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/include",
+                "C:/Users/PC do Jott4/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_base/include",
+                "C:/Users/PC do Jott4/.pico-sdk/sdk/1.5.1/src/rp2040/hardware_structs/include",
+                "C:/Users/PC do Jott4/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/include",
+                "C:/Users/PC do Jott4/.pico-sdk/sdk/1.5.1/src/rp2040/hardware_regs/include",
+                "C:/Users/PC do Jott4/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/include"
             ],
             "forcedInclude": [
                 "${userHome}/.pico-sdk/sdk/2.1.0/src/common/pico_base_headers/include/pico.h",

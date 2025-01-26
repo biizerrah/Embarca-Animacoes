@@ -7,6 +7,8 @@
 #include "animacao_TeclaC.h"
 #include "animacao_TeclaD.h"
 #include "animacao_TeclaHastag.h"
+#include "animacao_onda.h"
+#include "animacao_explosao.h" 
 
 //Inicia a configuração do teclado 
 const uint ROW_PINS[4] = {9, 8, 6, 5};     // Linhas: R1, R2, R3, R4
@@ -127,19 +129,18 @@ int main() {
             // Animação 0
             printf("Tecla 0 pressionada da animação 0\n");
             animacao_cobrinha(500); //sleep ms é 500
-
         }
         else if (key == '1') 
         {
             // Animação 1
             printf("Tecla 1 pressionada da animação 1\n");
-            // Chame a função para a animação 1
+            animacao_ondas(500); // Chama a animação de onda quando a tecla '1' é pressionada
         }
         else if (key == '2') 
         {
             // Animação 2
             printf("Tecla 2 pressionada da animação 2\n");
-            // Chame a função para a animação 2
+            animacao_explosao(500); // Chame a função para a animação 2
         }
         else if (key == '3') 
         {
@@ -172,7 +173,6 @@ int main() {
         }
     }
 
-    sleep_ms(200);  // Aguarda 100ms antes de verificar novamente
+    sleep_ms(200);  // Aguarda 200ms antes de verificar novamente
   }
 }
-
