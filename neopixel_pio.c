@@ -8,6 +8,7 @@
 #include "animacao_TeclaD.h"
 #include "animacao_TeclaHastag.h"
 
+
 //Inicia a configuração do teclado 
 const uint ROW_PINS[4] = {9, 8, 6, 5};     // Linhas: R1, R2, R3, R4
 const uint COL_PINS[4] = {4, 3, 2, 28};    // Colunas: C1, C2, C3, C4
