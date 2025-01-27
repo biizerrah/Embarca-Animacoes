@@ -10,6 +10,8 @@
 #include "pico/bootrom.h"  // Inclui a função reset_usb_boot
 #include "animacao_onda.h"
 #include "animacao_explosao.h" 
+#include "animacao_corrida.h" 
+#include "animacao_aleatoria.h" 
 
 
 //Inicia a configuração do teclado 
@@ -148,13 +150,13 @@ int main() {
         {
             // Animação 3
             printf("Tecla 3 pressionada da animação 3\n");
-            // Chame a função para a animação 3
+            animacao_aleatoria(500);// Chame a função para a animação 3
         }
         else if (key == '4') 
         {
             // Animação 4
             printf("Tecla 4 pressionada da animação 4\n");
-            // Chame a função para a animação 4
+            animacao_corrida(500);// Chame a função para a animação 4
         }
         else if (key == '5') 
         {
