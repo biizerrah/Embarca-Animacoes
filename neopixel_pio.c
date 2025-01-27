@@ -7,8 +7,10 @@
 #include "animacao_TeclaC.h"
 #include "animacao_TeclaD.h"
 #include "animacao_TeclaHastag.h"
+#include "pico/bootrom.h"  // Inclui a função reset_usb_boot
 #include "animacao_onda.h"
 #include "animacao_explosao.h" 
+
 
 //Inicia a configuração do teclado 
 const uint ROW_PINS[4] = {9, 8, 6, 5};     // Linhas: R1, R2, R3, R4
@@ -166,6 +168,14 @@ int main() {
             printf("Tecla 6 pressionada da animação 6\n");
             // Chame a função para a animação 6
         }
+
+         else if (key == '*') 
+        {
+            printf("Tecla * acionada. Reiniciando no modo de gravação...\n");
+            reset_usb_boot(0, 0);  // Reinicia o Pico no modo de gravação via USB
+        }
+        
+
         else 
         {
             // Tecla desconhecida
