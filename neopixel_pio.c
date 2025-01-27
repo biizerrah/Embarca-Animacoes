@@ -13,6 +13,7 @@
 #include "animacao_corrida.h" 
 #include "animacao_aleatoria.h"
 #include "animacao_respiracao.h"
+#include "animacao_relogio.h"
 
 
 //Inicia a configuração do teclado 
@@ -169,7 +170,7 @@ int main() {
         {
             // Animação 6
             printf("Tecla 6 pressionada da animação 6\n");
-            // Chame a função para a animação 6
+            animacao_relogio(1000);
         }
 
          else if (key == '*') 
