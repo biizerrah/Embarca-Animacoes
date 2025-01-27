@@ -12,6 +12,7 @@
 #include "animacao_explosao.h" 
 #include "animacao_corrida.h" 
 #include "animacao_aleatoria.h" 
+#include "animacao_Tecla6.h"
 
 
 //Inicia a configuração do teclado 
@@ -88,10 +89,10 @@ int main() {
   // Não faz mais nada. Loop infinito.
   while (true) {
 
-    char key = scan_keypad(); 
+    //char key = scan_keypad(); 
     //Para testar na placa digitando os comandos, comente a linha acima e descomente as duas linhas abaixo.
-    //char key;
-    //scanf("%c", &key);
+    char key;
+    scanf("%c", &key);
 
     if (key != '\0') // Se alguma tecla foi pressionada
     {
@@ -168,7 +169,7 @@ int main() {
         {
             // Animação 6
             printf("Tecla 6 pressionada da animação 6\n");
-            // Chame a função para a animação 6
+            animacao_tecla_6();
         }
 
          else if (key == '*') 

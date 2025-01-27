@@ -1,6 +1,6 @@
 #include "matriz_rgb.h"
 #include <stdlib.h>
-#include "../../../.pico-sdk/sdk/1.5.1/src/common/pico_time/include/pico/time.h"
+#include "time.h"
 void animacao_explosao(int sleep) {
     const int altura = 5;
     const int largura = 5;
