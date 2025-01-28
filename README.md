@@ -1,16 +1,30 @@
 # Embarca Animações [Unidade 03 - Capitulo 04] Subgrupo 2
 
-Simulação do hardware
 
+##### **Para assistir o resultado do projeto [CLIQUE AQUI](https://www.youtube.com/watch?v=R1gO279KbFg)**
+##### **Observe abaixo o hardware simulado.**
 <img src="Placa.png" alt="Simulação do hardware" width="450">
 
 
-Para testar o projeto em uma placa fisica siga a seguinte instrução:
-```bash
-# No arquivo: neopixel_pio.c 
-Comente essa linha de código: char key = scan_keypad();
-Desfaça o comentario dessas linhas: //char key; e //scanf("%c", &key);
-```
+#### Esse projeto consiste em apresentar diferentes animações nos LEDS dependendo da tecla acionada. Por exemplo, nesse projeto ao pressionar a: 
+ - Tecla 0 (Cobrinha)
+ - Tecla 1 (Onda Azul) - *Buzzer toca durante toda a animação*
+ - Tecla 2 (Explosão) - *Buzzer é acionado*
+ - Tecla 3 (Explosão de cores) - *Buzzer é acionado*
+ - Tecla 4 (Corrida) - *Buzzer é acionado*
+ - Tecla 5 (Inspirar e expirar)
+ - Tecla 6 (Contagem regressiva de 10 - 0)
+ - Tecla 7 (Espiral) - *Buzzer é acionado*
+ - Tecla 8 (Barra caindo) - *Buzzer é acionado*
+ - Tecla 9 (Implosão) - *Buzzer é acionado*
+ - Tecla B (LEDS ficam **azuis** com **100%** de intensidade) - *Buzzer é acionado*
+ - Tecla C (LEDS ficam **vermelhos** com **80%** de intensidade) - *Buzzer é acionado*
+ - Tecla D (LEDS ficam **verdes** com **50%** de intensidade) - *Buzzer é acionado*
+ - Tecla # (LEDS ficam **brancos** com **20%** de intensidade) - *Buzzer é acionado*
+ #### E algumas teclas possuem funcionalidades como:
+ - Tecla * (Habilita o modo de gravação)
+ - Tecla A (Desliga todos os LEDS) - *Buzzer acionando. Não é possível apagar todos os LEDs de uma animações enquanto ela estiver em andamento.*
+ 
 
 ## Pré-requisitos para abrir o projeto
 
@@ -47,4 +61,9 @@ Para configurar o ambiente de desenvolvimento, siga as instruções abaixo:
 ### 5. Instale o Raspberry Pi Pico SDK 
 - Faça o download aqui: [Pico Setup Windows](https://github.com/raspberrypi/pico-setup-windows?tab=readme-ov-file).
 
-
+## Para testar o projeto em uma placa fisica siga as seguintes instruções:
+```bash
+# No arquivo: neopixel_pio.c 
+Comente essa linha de código: char key = scan_keypad();
+Desfaça o comentario dessas linhas: //char key; e //scanf("%c", &key);
+```
