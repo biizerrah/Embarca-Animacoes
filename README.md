@@ -62,8 +62,11 @@ Para configurar o ambiente de desenvolvimento, siga as instruções abaixo:
 - Faça o download aqui: [Pico Setup Windows](https://github.com/raspberrypi/pico-setup-windows?tab=readme-ov-file).
 
 ## Para testar o projeto em uma placa fisica siga as seguintes instruções:
+- Instale o [Zadig](https://zadig.akeo.ie/) para configuração de drivers
+- Para a comunicação serial baixe o [PuTTY](https://www.putty.org/)
+- No arquivo abaixo, faça as seguintes alterações: 
 ```bash
-# No arquivo: neopixel_pio.c 
+# neopixel_pio.c 
 Comente essa linha de código: char key = scan_keypad();
 Desfaça o comentario dessas linhas: //char key; e //scanf("%c", &key);
 ```
