@@ -36,8 +36,5 @@
     "raspberry-pi-pico.useCmakeTools": false,
     "raspberry-pi-pico.cmakePath": "${HOME}/.pico-sdk/cmake/v3.29.9/bin/cmake",
     "raspberry-pi-pico.ninjaPath": "${HOME}/.pico-sdk/ninja/v1.12.1/ninja",
-    "files.associations": {
-        "animacao_cobra.h": "c",
-        "animacao_teclac.h": "c"
-    }
+    "C_Cpp.errorSquiggles": "disabled"
 }

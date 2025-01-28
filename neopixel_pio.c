@@ -7,6 +7,12 @@
 #include "animacao_TeclaC.h"
 #include "animacao_TeclaD.h"
 #include "animacao_TeclaHastag.h"
+#include "pico/bootrom.h"  // Inclui a função reset_usb_boot
+#include "animacao_onda.h"
+#include "animacao_explosao.h" 
+#include "animacao_corrida.h" 
+#include "animacao_aleatoria.h" 
+
 
 
 //Inicia a configuração do teclado 
@@ -128,31 +134,30 @@ int main() {
             // Animação 0
             printf("Tecla 0 pressionada da animação 0\n");
             animacao_cobrinha(500); //sleep ms é 500
-
         }
         else if (key == '1') 
         {
             // Animação 1
             printf("Tecla 1 pressionada da animação 1\n");
-            // Chame a função para a animação 1
+            animacao_ondas(500); // Chama a animação de onda quando a tecla '1' é pressionada
         }
         else if (key == '2') 
         {
             // Animação 2
             printf("Tecla 2 pressionada da animação 2\n");
-            // Chame a função para a animação 2
+            animacao_explosao(500); // Chame a função para a animação 2
         }
         else if (key == '3') 
         {
             // Animação 3
             printf("Tecla 3 pressionada da animação 3\n");
-            // Chame a função para a animação 3
+            animacao_aleatoria(500);// Chame a função para a animação 3
         }
         else if (key == '4') 
         {
             // Animação 4
             printf("Tecla 4 pressionada da animação 4\n");
-            // Chame a função para a animação 4
+            animacao_corrida(500);// Chame a função para a animação 4
         }
         else if (key == '5') 
         {
@@ -166,6 +171,14 @@ int main() {
             printf("Tecla 6 pressionada da animação 6\n");
             // Chame a função para a animação 6
         }
+
+         else if (key == '*') 
+        {
+            printf("Tecla * acionada. Reiniciando no modo de gravação...\n");
+            reset_usb_boot(0, 0);  // Reinicia o Pico no modo de gravação via USB
+        }
+        
+
         else 
         {
             // Tecla desconhecida
@@ -173,7 +186,6 @@ int main() {
         }
     }
 
-    sleep_ms(200);  // Aguarda 100ms antes de verificar novamente
+    sleep_ms(200);  // Aguarda 200ms antes de verificar novamente
   }
 }
-
