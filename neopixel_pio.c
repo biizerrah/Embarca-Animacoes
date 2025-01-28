@@ -11,7 +11,6 @@
 #include "animacao_onda.h"
 #include "animacao_explosao.h" 
 #include "animacao_corrida.h" 
-#include "animacao_aleatoria.h" 
 #include "hardware/gpio.h" // Inclui a biblioteca para controle dos pinos GPIO
 #include "animacao_borda_centro.h"
 #include "animacao_espiral.h"
