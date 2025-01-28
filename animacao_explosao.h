@@ -1,7 +1,12 @@
 #include "matriz_rgb.h"
 #include <stdlib.h>
-#include "../../../.pico-sdk/sdk/1.5.1/src/common/pico_time/include/pico/time.h"
+#include "pico/time.h"
 void animacao_explosao(int sleep) {
+
+        // Emitir som antes de iniciar a animação
+    play_sound(21, 1000, 500); // Emite um som de 1 kHz por 500 ms no pino GPIO 21
+
+    
     const int altura = 5;
     const int largura = 5;
 

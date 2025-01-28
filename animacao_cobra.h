@@ -1,4 +1,6 @@
 void animacao_cobrinha(int sleep) {
+            // Emitir som antes de iniciar a animação
+    play_sound(21, 1000, 500); // Emite um som de 1 kHz por 500 ms no pino GPIO 21
 
     //frame 1 
     npClear();
