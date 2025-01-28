@@ -16,7 +16,9 @@
 #include "animacao_borda_centro.h"
 #include "animacao_espiral.h"
 #include "animacao_zigzag.h"
-
+#include "animacao_aleatoria.h"
+#include "animacao_respiracao.h"
+#include "animacao_relogio.h"
 
 
 
@@ -168,13 +170,13 @@ int main() {
         {
             // Animação 5
             printf("Tecla 5 pressionada da animação 5\n");
-            // Chame a função para a animação 5
+            animacao_respiracao(18);
         }
         else if (key == '6') 
         {
             // Animação 6
             printf("Tecla 6 pressionada da animação 6\n");
-            // Chame a função para a animação 6
+            animacao_relogio(1000);
         }
         else if (key == '7') 
         {
