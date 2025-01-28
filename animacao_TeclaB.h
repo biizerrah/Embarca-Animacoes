@@ -2,6 +2,7 @@
 #include "pico/stdlib.h"
 #include "matriz_rgb.h"  // Inclui a biblioteca para controlar a matriz de LEDs
 #include "hardware/pwm.h"
+#include "buzzer.h"
 
 
 // Função para emitir som no buzzer

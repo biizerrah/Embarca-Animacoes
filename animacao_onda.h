@@ -4,6 +4,8 @@ void animacao_ondas(int sleep) {
 
     // Iterar sobre as colunas para a "onda" se mover da esquerda para a direita
     for (int passo = 0; passo < largura + altura - 1; passo++) {
+            // Emitir som antes de iniciar a animação
+    play_sound(21, 1000, 500); // Emite um som de 1 kHz por 500 ms no pino GPIO 21
         npClear();
 
         // Declarar o array dinamicamente e inicializá-lo manualmente

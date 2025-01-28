@@ -11,9 +11,15 @@
 #include "animacao_onda.h"
 #include "animacao_explosao.h" 
 #include "animacao_corrida.h" 
+#include "animacao_aleatoria.h" 
+#include "hardware/gpio.h" // Inclui a biblioteca para controle dos pinos GPIO
+#include "animacao_borda_centro.h"
+#include "animacao_espiral.h"
+#include "animacao_zigzag.h"
 #include "animacao_aleatoria.h"
 #include "animacao_respiracao.h"
 #include "animacao_relogio.h"
+
 
 
 //Inicia a configuração do teclado 
@@ -171,6 +177,27 @@ int main() {
             // Animação 6
             printf("Tecla 6 pressionada da animação 6\n");
             animacao_relogio(1000);
+        }
+        else if (key == '7') 
+        {
+            // Animação 7
+            printf("Tecla 6 pressionada da animação 7\n");
+            // Chame a função para a animação 7
+             animacao_espiral(200); //sleep ms é 200
+        }
+        else if (key == '8') 
+        {
+            // Animação 8
+            printf("Tecla 8 pressionada da animação 8\n");
+            // Chame a função para a animação 8
+              animacao_zigzag(200);
+        }
+        else if (key == '9') 
+        {
+            // Animação 9
+            printf("Tecla 9 pressionada da animação 9\n");
+            // Chame a função para a animação 9
+              animacao_borda_centro(200);
         }
 
          else if (key == '*') 

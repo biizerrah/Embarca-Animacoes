@@ -1,5 +1,5 @@
 void animacao_cobrinha(int sleep) {
-
+           
     //frame 1 
     npClear();
     int framecobra1[5][5][3]={
