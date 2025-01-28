@@ -1,6 +1,9 @@
+
 #define ANIMACAO_ESPIRAL_H
 
+#ifndef ACESSO
 #define ACESSO {0, 255, 0}  // Cor verde
+#endif
 #define APAGADO {0, 0, 0}   // Cor apagada (preto)
 
 void animacao_espiral(int sleep) {
